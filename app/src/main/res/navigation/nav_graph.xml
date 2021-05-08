@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/songsFragment">
+    <fragment
+        android:id="@+id/songsFragment"
+        android:name="com.example.crownstackdemo.ui.songs.SongsFragment"
+        android:label="songs_fragment"
+        tools:layout="@layout/fragment_songs">
+        <action
+            android:id="@+id/navigate_to_product_detail"
+            app:destination="@id/song_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/song_detail"
+        android:name="com.example.crownstackdemo.ui.songs.SongDetailsFragment"
+        android:label="Song Detail"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="arg"
+            app:argType="com.example.crownstackdemo.data.model.Songs" />
+
+    </fragment>
+
+</navigation>
